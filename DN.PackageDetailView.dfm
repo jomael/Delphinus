@@ -9,9 +9,6 @@ object PackageDetailView: TPackageDetailView
   ParentShowHint = False
   ShowHint = True
   TabOrder = 0
-  DesignSize = (
-    302
-    618)
   object pnlHeader: TPanel
     AlignWithMargins = True
     Left = 1
@@ -47,6 +44,7 @@ object PackageDetailView: TPackageDetailView
       Anchors = [akLeft, akTop, akRight]
       AutoSize = False
       Caption = 'This is the repository Description'
+      EllipsisPosition = epEndEllipsis
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
@@ -186,6 +184,7 @@ object PackageDetailView: TPackageDetailView
       Anchors = [akLeft, akTop, akRight]
       AutoSize = False
       Caption = 'Author'#39's Name'
+      EllipsisPosition = epEndEllipsis
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -15
@@ -275,6 +274,17 @@ object PackageDetailView: TPackageDetailView
       TabOrder = 1
       OnClick = btnReportClick
     end
+    object btnHome: TButton
+      Left = 5
+      Top = 443
+      Width = 38
+      Height = 38
+      Anchors = [akLeft, akBottom]
+      ImageIndex = 2
+      Images = ilButtons
+      TabOrder = 2
+      OnClick = btnHomeClick
+    end
   end
   object btnLicense: TButton
     Left = 3
@@ -285,17 +295,6 @@ object PackageDetailView: TPackageDetailView
     Images = ilButtons
     TabOrder = 2
     OnClick = btnLicenseClick
-  end
-  object btnHome: TButton
-    Left = 6
-    Top = 572
-    Width = 38
-    Height = 38
-    Anchors = [akLeft, akBottom]
-    ImageIndex = 2
-    Images = ilButtons
-    TabOrder = 3
-    OnClick = btnHomeClick
   end
   object ilButtons: TImageList
     ColorDepth = cd32Bit
